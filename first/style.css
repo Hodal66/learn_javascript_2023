@@ -1,0 +1,14 @@
+.greenStyle {
+    color: rgb(128, 4, 0);
+}
+
+#borderStyle {
+    border: 2px solid green;
+    padding: 1rem auto;
+    border-radius: 2rem;
+}
+
+.amavubiStyle {
+    background-color: aliceblue;
+    color: darkorange;
+}
