@@ -1,6 +1,7 @@
 let RandomColor = document.querySelector("#btnRandomColor");
 let h1 = document.querySelector("h1");
-
+let buttons = document.querySelectorAll("button");
+let h3 = document.querySelectorAll("h3");
 RandomColor.addEventListener("click", () => {
   console.log("Do you whant to change the color??");
 
@@ -21,3 +22,15 @@ const makeRandomColor = () => {
   }
   return `rgb(${r},${g},${b})`;
 };
+
+for (let button of buttons) {
+  button.addEventListener("click", colorized);
+}
+for (let header3 of h3) {
+  header3.addEventListener("click", colorized);
+}
+
+function colorized() {
+  this.style.backgroundColor = makeRandomColor();
+  this.style.color = makeRandomColor();
+}
