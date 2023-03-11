@@ -34,3 +34,20 @@ changeBackGroundColor("red", 2000, () => {
     });
   });
 });
+
+const myVideoApi =
+  ("abacus",
+  () => {
+    saveToTheDatabase(
+      myVideo,
+      () => {
+        //If it saved run this
+      },
+      () => {
+        //if it doesn't works run this
+      }
+    ),
+      () => {
+        //if all failed run this
+      };
+  });
