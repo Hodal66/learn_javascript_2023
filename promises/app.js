@@ -1,22 +1,12 @@
-let feckeApiCallBack = (ul, success, failure) => {
-  delay = Math.floor(Math.random() * 4500) + 500;
-  setTimeout(() => {
-    if (delay > 4000) {
-      failure("Connection Failled");
-    } else {
-      success(`Well Done the page is loaded successfully on this ${ul}`);
-    }
-  }, delay);
-};
-const feckeRequestApiCallBack = (url) => {
+const feckApiPromises = (url) => {
   return new Promise((rejected, success) => {
-    let delay = Math.floor(Math.random() * 4500) + 500;
+    delay = Math.floor(Math.random() * 4500) + 500;
     setTimeout(() => {
       if (delay > 4000) {
-        rejected("Connection failed");
+        rejected("App was Rejected!!");
       } else {
-        success(`App rendered successfully at ${url}`);
+        success(`App was successfully rendered on ${url}`);
       }
-    }, delay);
+    });
   });
 };
