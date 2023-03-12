@@ -1,5 +1,5 @@
 const feckApiPromises = (url) => {
-  return new Promise((rejected, resolved) => {
+  return new Promise((resolved, rejected) => {
     delay = Math.floor(Math.random() * 5000);
     setTimeout(() => {
       if (delay > 4000) {
