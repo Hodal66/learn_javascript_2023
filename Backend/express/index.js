@@ -1,16 +1,18 @@
 const express = require("express");
 const colors = require("colors");
+const app = express();
 const ejs = require("ejs");
-console.log(ejs);
+const path = require("path");
 const port = 9000;
 
-// console.log(colors);
-const app = express();
-app.get("/", (req, res) => {
-  res.send("Wellcome to Hme page site");
+app.set("views engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
+
+app.get("/hell", (req, res) => {
+  res.render("home.ejs");
 });
 app.get("/cats", (req, res) => {
-  res.send(`This route is for cats page`);
+  res.send(`This route is for cats page `);
 });
 app.get("/gots", (req, res) => {
   res.send(`This Routes is for Gots page `);
