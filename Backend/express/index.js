@@ -1,5 +1,7 @@
 const express = require("express");
 const colors = require("colors");
+const ejs = require("ejs");
+console.log(ejs);
 const port = 9000;
 
 // console.log(colors);
@@ -30,6 +32,10 @@ app.get("/my-search", (req, res) => {
     );
   }
   console.log();
+});
+
+app.post("/postcats", (req, res) => {
+  res.send("THis is post request whic is different with get request!!");
 });
 
 app.listen(port, () => {
