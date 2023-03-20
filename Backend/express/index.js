@@ -11,6 +11,14 @@ app.set("views", path.join(__dirname, "/views"));
 app.get("/hell", (req, res) => {
   res.render("home.ejs");
 });
+app.get("/home/r/:subreddit", (req, res) => {
+  const { subreddit } = req.params;
+  res.render("subreddit.ejs", { subreddit });
+});
+app.get("/random", (req, res) => {
+  const number = Math.floor(Math.random() * 10) + 1;
+  res.render("random.ejs", { number });
+});
 app.get("/cats", (req, res) => {
   res.send(`This route is for cats page `);
 });
