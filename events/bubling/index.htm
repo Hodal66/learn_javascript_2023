@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>How Event bubling works</h1>
+    <section onclick="alert('you clicked on section')">
+        <h2 onclick="alert('you clicked on h1')">We want to click only this
+            <button onclick="alert('you clicked on button')">Click me</button>
+        </h2>
+    </section>
+    <script src="bubling.js"></script>
+</body>
+
+</html>
