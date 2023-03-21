@@ -3,28 +3,41 @@ const colors = require("colors");
 const app = express();
 const ejs = require("ejs");
 const path = require("path");
+const data = require("./data.json");
 const port = 9000;
 
-app.set("views engine", "ejs");
+app.set("views engin", "ejs");
 app.set("views", path.join(__dirname, "/views"));
+app.use(express.static(path.join(__dirname, "public")));
 
-app.get("/hell", (req, res) => {
+app.get("/", (req, res) => {
   res.render("home.ejs");
 });
+
 app.get("/home/r/:subreddit", (req, res) => {
   const { subreddit } = req.params;
-  res.render("subreddit.ejs", { subreddit });
+  const selectedData = data[subreddit];
+  if (selectedData) {
+    res.render("school.ejs", { ...selectedData });
+  } else {
+    res.render("pageNotFound.ejs", { subreddit });
+  }
 });
+
 app.get("/random", (req, res) => {
   const number = Math.floor(Math.random() * 10) + 1;
   res.render("random.ejs", { number });
 });
+
 app.get("/cats", (req, res) => {
-  res.send(`This route is for cats page `);
+  const allCats = ["majua, martine, kjaqueline, cowboy, bigDog"];
+  res.render("cats.ejs", { allCats });
 });
+
 app.get("/gots", (req, res) => {
   res.send(`This Routes is for Gots page `);
 });
+
 app.get("/home/:addredit/:secondRoute", (req, res) => {
   res.send(
     `<h1>This is home page and the First Routes is ${req.params.addredit} The Second Route is ${req.params.secondRoute}</h1>`
@@ -41,7 +54,6 @@ app.get("/my-search", (req, res) => {
       `<h1>Your Search query of ${searchQuery} is not what we have</h1> `
     );
   }
-  console.log();
 });
 
 app.post("/postcats", (req, res) => {

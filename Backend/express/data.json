@@ -1,0 +1,65 @@
+{
+    "students": {
+        "name": "Mukamana alice",
+        "ages": 27,
+        "sex": "Female",
+        "description": " reiciendis repudiandae laborum xime repellat veritatis voluptatum eius, soluta corporis, officiis tempore? Nam tempora vitae id molestiae natus beatae. Cupiditate provident perferendis minus et.",
+        "posts": [
+            {
+                "title": "tempora vitae id molestiae natus beatae.",
+                "author": "Mukamana alice",
+                "img": "https://www.pixelstalk.net/wp-content/uploads/2016/08/Best-Amazing-Images-For-Desktop.jpg"
+            },
+            {
+                "title": "tempora vitae id molestiae natus beatae.",
+                "author": "Mukamana alice",
+                "img": "https://mymodernmet.com/wp/wp-content/uploads/2019/07/will-burrard-lucas-beetlecam-23-1024x683.jpg"
+            },
+            {
+                "title": "tempora vitae id molestiae natus beatae.",
+                "author": "Mukamana alice"
+            }
+        ]
+    },
+    "lectures": {
+        "name": "UMWIZA DEBOLA",
+        "ages": 37,
+        "sex": "Female",
+        "description": "  repellat veritatis voluptatum eius, soluta corporis, officiis tempore? Nam tempora vitae id molestiae natus beatae. Cupiditate provident perferendis minus et.",
+        "posts": [
+            {
+                "title": " laborum xime repellat",
+                "author": "UMWIZA DEBOLA"
+            },
+            {
+                "title": "reiciendis repudiandae ",
+                "author": "UMWIZA DEBOLA"
+            },
+            {
+                "title": "reiciendis xime repellat",
+                "author": "Mukamana alice",
+                "img": "https://www.usnews.com/object/image/0000017b-2cb8-d4a4-adff-3cb8e47d0000/intro.jpg?update-time=1628542919817&size=responsive970"
+            }
+        ]
+    },
+    "leaders": {
+        "name": "Mwungu arakarama varensi",
+        "ages": 26,
+        "sex": "Male",
+        "description": "  veritatis voluptatum eius, soluta corporis, officiis tempore? Nam tempora vitae id molestiae natus beatae. Cupiditate provident perferendis minus et.",
+        "posts": [
+            {
+                "title": " natus beatae.",
+                "author": "Mwungu  "
+            },
+            {
+                "title": "molestiae natus beatae.",
+                "author": "varensi"
+            },
+            {
+                "title": "tempora vitae  beatae.",
+                "author": " arakarama "
+            }
+        ]
+    }
+}
