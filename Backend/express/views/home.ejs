@@ -1,31 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("partials/header.ejs") %>
+    <%- include("partials/navbar.ejs") %>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home ejs</title>
-</head>
+        <body>
+            <h1>This is home page <%= 4 + 9 + 200 %>
+            </h1>
 
-<body>
-    <h1>This is home page <%= 4 + 9 + 200 %>
-    </h1>
+            <h2>Hy this is me on the <%= "Mamaru karate club" .toUpperCase() %>
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
+                repellat minus magni voluptas maxime ex quod aliquam incidunt expedita
+                officia, totam odio distinctio dolorum? Obcaecati deserunt neque molestiae
+                necessitatibus inventore?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
+                repellat minus magni voluptas maxime ex quod aliquam incidunt expedita
+                officia, totam odio distinctio dolorum? Obcaecati deserunt neque molestiae
+                necessitatibus inventore?
+            </p>
+        </body>
 
-    <h2>Hy this is me on the <%= "Mamaru karate club" .toUpperCase() %>
-    </h2>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
-        repellat minus magni voluptas maxime ex quod aliquam incidunt expedita
-        officia, totam odio distinctio dolorum? Obcaecati deserunt neque molestiae
-        necessitatibus inventore?
-    </p>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt
-        repellat minus magni voluptas maxime ex quod aliquam incidunt expedita
-        officia, totam odio distinctio dolorum? Obcaecati deserunt neque molestiae
-        necessitatibus inventore?
-    </p>
-</body>
-
-</html>
+        <%- include("partials/footer.ejs") %>
