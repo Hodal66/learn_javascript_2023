@@ -2,17 +2,19 @@
     <%- include("partials/navbar.ejs") %>
 
         <body>
-            <h1>
-                The random number is : <%= number %>
-                    <% if(number%2==0){ %>
-                        <h1>This Number is Even</h1>
-                        <% } else {%>
-                            <h1>NUmber is Odd</h1>
-                            <%}%>
-            </h1>
-            <h1>
-                <%= number % 2===0 ? 'EVEN' :'ODD'%>
-            </h1>
+            <section class="container">
+                <h1>
+                    The random number is : <%= number %>
+                        <% if(number%2==0){ %>
+                            <h1>This Number is Even</h1>
+                            <% } else {%>
+                                <h1>NUmber is Odd</h1>
+                                <%}%>
+                </h1>
+                <h1>
+                    <%= number % 2===0 ? 'EVEN' :'ODD'%>
+                </h1>
+            </section>
         </body>
 
         <%- include("partials/footer.ejs") %>

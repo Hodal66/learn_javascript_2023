@@ -2,15 +2,17 @@
     <%- include("partials/navbar.ejs") %>
 
         <body>
-            <h1>All cats we have in our fam are :</h1>
+            <section class="container">
+                <h1>All cats we have in our fam are :</h1>
 
-            <ul>
-                <% for(let cat of allCats ){ %>
-                    <li>
-                        <%= cat %>
-                    </li>
-                    <%}%>
-            </ul>
+                <ul>
+                    <% for(let cat of allCats ){ %>
+                        <li>
+                            <%= cat %>
+                        </li>
+                        <%}%>
+                </ul>
+            </section>
         </body>
 
         <%- include("partials/footer.ejs") %>
