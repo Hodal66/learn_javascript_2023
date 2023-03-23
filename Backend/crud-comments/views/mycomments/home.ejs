@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user comment</title>
+</head>
+
+<body>
+    <h1>Hey Here is your
+
+        <ul>
+            <%for(let comment of karahanyuze) {%>
+                <li>
+                    <span>Your name is : <%= comment.fullName %> </span>
+                </li>
+                <% } %>
+        </ul>
+    </h1>
+    <a href="/comments/new">create new comment</a>
+</body>
+
+</html>
