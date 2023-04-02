@@ -8,10 +8,17 @@
     <title>show comment</title>
 </head>
 
-<body>
+<body style="text-align: center;">
     <h1>Hello this is show one comment </h1>
-    <h2> you need to be shown commend number : <%= comment %>
+
+    <h2> you need to be shown commend number : <%= comments.id %>
     </h2>
+    <p><span>Your Full Nameis : <%= comments.fullName %></span>
+    </p>
+    <p><span>Ypur Comment is : <%= comments.comment %></span>
+
+    </p>
+
     <a href="/comments">Back to comments</a>
 </body>
 

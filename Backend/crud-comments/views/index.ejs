@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <h1>This is allcomments</h1>
+    <% for(let c of karahanyuze) {%>
+        <ul>
+            <li>Comment Id : <%= c.id %>
+            </li>
+            <li><span>
+                    <%= c.fullName %>
+                </span> - <b><span>
+                        <%= c.comment %>
+                    </span></b>
+                <a href="/comments/<%=c.id%>">Details</a>
+            </li>
+        </ul>
+
+        <% } %>
+            <a href="/comments/create">create new</a>
+</body>
+
+</html>

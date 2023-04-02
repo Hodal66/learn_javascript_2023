@@ -15,9 +15,11 @@ const karahanyuze = [
   { id: 3, fullName: "Cyiza besige", comment: "Nkwitayeho" },
 ];
 server.get("/comments", (req, res) => {
-  res.render("mycomments/home.ejs", { karahanyuze });
+  res.render("index.ejs", { karahanyuze });
 });
-
+server.get("/comments/create", (req, res) => {
+  res.render("mycomments/createComment.ejs", { karahanyuze });
+});
 server.post("/comments", (req, res) => {
   console.log(req.body);
   const { fullName, comment } = req.body;
@@ -26,12 +28,14 @@ server.post("/comments", (req, res) => {
 });
 
 server.get("/comments/:id", (req, res) => {
-  const { id } = req.params.id;
-  const comment = karahanyuze.find((c) => c.id === parseInt(id));
-  res.render("mycomments/show.ejs", { comment });
-});
-server.get("/comments/new", (req, res) => {
-  res.render("mycomments/new.ejs");
+  const { id } = req.params;
+
+  let comments = karahanyuze.find((item) => item.id === parseInt(id));
+  if (comments) {
+    res.render("mycomments/show.ejs", { comments });
+  } else {
+    res.send("Page not Found!!");
+  }
 });
 
 server.get("/", (req, res) => {
